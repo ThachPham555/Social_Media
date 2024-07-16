@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context=".HomeActivity">
+
+    <TextView
+        android:id="@+id/textViewFacebook"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="facebook"
+        android:textSize="40dp"
+        android:textStyle="bold"
+        android:textColor="@color/facebook"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="20dp"
+        />
+    <androidx.cardview.widget.CardView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="6dp"
+        app:cardCornerRadius="25dp"
+        app:cardBackgroundColor="@color/gray1">
+        <ImageView
+            android:id="@+id/log_out"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_logout"
+            android:backgroundTint="@color/gray"
+            app:tint="@color/gray" />
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="110dp"
+        android:layout_marginTop="6dp"
+        app:cardCornerRadius="25dp"
+        app:cardBackgroundColor="@color/gray1">
+        <ImageView
+            android:id="@+id/add"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_add"
+            android:backgroundTint="@color/gray"
+            app:tint="@color/gray" />
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="60dp"
+        android:layout_marginTop="6dp"
+        app:cardCornerRadius="25dp"
+        app:cardBackgroundColor="@color/gray1">
+        <ImageView
+            android:id="@+id/search"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_search"
+            android:backgroundTint="@color/gray"
+            app:tint="@color/gray" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewFacebook"
+        android:layout_above="@id/navigation"
+        />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/navigation"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:itemIconTint="@color/color_navigation"
+        app:itemTextColor="@color/color_navigation"
+        app:menu="@menu/menu_bottom" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="62dp"
+        android:layout_marginRight="6dp"
+        android:src="@drawable/ic_add"
+        android:backgroundTint="@color/facebook"/>
+</RelativeLayout>

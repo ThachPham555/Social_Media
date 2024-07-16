@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UpdateActivity">
+    <TextView
+        android:id="@+id/textViewFacebook"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="facebook"
+        android:textSize="40dp"
+        android:textStyle="bold"
+        android:textColor="@color/facebook"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginLeft="20dp"
+        />
+    <androidx.cardview.widget.CardView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="6dp"
+        app:cardCornerRadius="25dp"
+        app:cardBackgroundColor="@color/gray1">
+        <ImageView
+            android:id="@+id/log_out"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_logout"
+            android:backgroundTint="@color/gray"
+            app:tint="@color/gray" />
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="110dp"
+        android:layout_marginTop="6dp"
+        app:cardCornerRadius="25dp"
+        app:cardBackgroundColor="@color/gray1">
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_add"
+            android:backgroundTint="@color/gray"
+            app:tint="@color/gray" />
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="60dp"
+        android:layout_marginTop="6dp"
+        app:cardCornerRadius="25dp"
+        app:cardBackgroundColor="@color/gray1">
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_search"
+            android:backgroundTint="@color/gray"
+            app:tint="@color/gray" />
+
+    </androidx.cardview.widget.CardView>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="Sửa bài viết"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:textColor="@color/black"
+                android:layout_marginTop="100dp"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/edit_text_description"
+            android:layout_marginTop="140dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Bạn đang nghĩ gì ?"
+            android:layout_marginBottom="16dp" />
+
+        <Button
+            android:id="@+id/button_choose_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Choose Image"
+            android:layout_below="@id/edit_text_description"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="16dp" />
+
+        <ImageView
+            android:id="@+id/image_view"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_below="@id/button_choose_image"
+            android:layout_marginBottom="16dp"
+            android:contentDescription="Chosen Image"
+            android:scaleType="centerCrop"
+            android:visibility="gone" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/image_view"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/button_upload"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="92dp"
+                android:text="UPDATE"
+                android:layout_centerHorizontal="true" />
+            <Button
+                android:id="@+id/back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="Back"
+                android:layout_centerHorizontal="true" />
+        </LinearLayout>
+    </RelativeLayout>
+
+
+
+</RelativeLayout>
